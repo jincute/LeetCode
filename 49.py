@@ -20,6 +20,7 @@ import pdb
 
 class Solution:
     def groupAnagrams(self, strs):
+        '''
         groups = []
         while len(strs) > 0:
             group = []
@@ -38,12 +39,25 @@ class Solution:
                     break
             groups.append(group)
         return groups
+        '''
+        result = collections.defaultdict(list)
+        for s in strs:
+            #print('tuple s:', tuple(sorted(s)))
+            #print('sorted: ', sorted(s))
+            #print('s: ', s)
+            result[tuple(sorted(s))].append(s)
+            #result[sorted(s)].append(s)
+            #print(result)
+            #pdb.set_trace()
+        return result.values()
 
+    '''
     def is_Anagrams(self, s1, s2):
         flag = False
         if sorted(s1) == sorted(s2):
             flag = True
         return flag
+    '''
 
 test = Solution()
 l = ["eat", "tea", "tan", "ate", "nat", "bat"]

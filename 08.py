@@ -2,9 +2,6 @@ import re
 import pdb
 class Solution:
     def myAtoi(self, str: str) -> int:
-        '''
-        # Solution 1
-
         str = str.strip()
         str = str.split()
         final = 0
@@ -25,13 +22,6 @@ class Solution:
                 except:
                     final = 0
         return final
-        '''
-        str = str.strip()
-        str = str.split()
-        final = 0
-        MAX_INT = 2**31 - 1
-        MIN_INT = -2**31
-
 
 S = Solution().myAtoi("a")
 print(S)

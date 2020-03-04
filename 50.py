@@ -4,7 +4,6 @@ class Solution:
         291 / 304 pass, time limit exceeded
         '''
         result = 1
-        if x <
         for i in range(abs(n)):
             result *= x
         if n < 0:
